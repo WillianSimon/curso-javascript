@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background-color: rgb(138, 197, 138);
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;/*vai descer para o meio, pois na altura nos colocamos 200px*/
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseout="sair()" onmouseenter="entrar()" >
+        Interaja
+    </div> 
+    <script>
+    var joe = document.querySelector("div#area")
+    
+    function clicar(){
+        joe.innerHTML = 'Gordinho'
+        joe.style.background = 'red'
+    }
+    function entrar(){
+        joe.innerHTML = 'Lindão'
+    }
+    function sair(){
+        joe.innerHTML = 'Artista'
+        joe.style.background = 'rgb(138, 197, 138)'
+    }
+    </script>
+</body>
+</html>
