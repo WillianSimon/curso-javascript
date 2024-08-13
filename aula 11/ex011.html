@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadenia</title>
+</head>
+<body>
+    <h1>Verificando o seu País</h1>
+    Em que País você mora? <input type="text" name="nacion" id="nacion">
+
+        <input type="button" id="nacion" value="Verificar" onclick="verificarNacionalidade()">
+    
+    <div id="res"></div>
+
+    <script>
+        function verificarNacionalidade() {
+            var nacion = window.document.querySelector('input#nacion')
+            var País = (nacion.value)
+            var res = window.document.querySelector('div#res')
+            res.innerHTML= `<p>Seu País é <strong>${País}</strong></p>`
+
+            if(País == 'Brasil' || País == 'brasil'){
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+            }else{
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            }
+        }
+        
+    </script>
+</body>
+</html>
